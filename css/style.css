@@ -1,0 +1,138 @@
+:root{
+    scroll-behavior: auto;
+}
+/* Start Global Style */
+*{
+    transition: all .3s;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+background: rgba(214, 46, 51, 0.6);
+border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: rgba(214, 46, 52, 0.918);
+}
+body{
+    overflow: hidden;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+/* Start Global Style */
+
+/* Start Loading Page Style */
+.loading{
+    position: fixed;
+    inset: 0;
+    background-color: #000;
+    z-index: 9999;
+    display: grid;
+    place-content: center;
+}
+.loader {
+    position: relative;
+    width: 64px;
+    height: 60px;
+}
+.loader::after {
+content: '';
+position: absolute;
+left: 0;
+bottom: 0;
+background: #fff;
+width: 64px;
+height: 32px;
+border-radius: 0 0 50px 50px;
+animation: move 0.5s linear infinite alternate;
+}
+.loader::before {
+content: '';
+position: absolute;
+left: 50%;
+top: 0;
+background: #FF3D00;
+width: 24px;
+height: 24px;
+transform: translateX(-50%) rotate(0deg);
+animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+100% { transform: translateX(-50%) rotate(360deg)}
+}
+@keyframes move {
+0% { transform: rotate(10deg)}
+100% { transform: rotate(-10deg)}
+}
+/* End Loading Page Style */
+
+/*Start Home Style*/
+#home{
+    background-image: linear-gradient(rgba(214, 46, 51, 0.6) 50%, rgba(214, 46, 51, 0.6) 100%),url('../image/events-heavenly-header.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+}
+.close-icon{
+    top: 20px;
+    right: 10px;
+    i{
+        cursor: pointer;
+    }
+}
+.close-icon i:hover, .list-links li a:hover{
+    color: rgba(214, 46, 51, 0.6);
+}
+.slide .open{
+    cursor: pointer;
+}
+/*End Home Style*/
+
+/* Start Singer Style */
+h3{
+    background-color: rgba(214, 46, 51, 0.6);
+    cursor: pointer;
+}
+.singer-info p{
+    display: none;
+    background-color: #eee;
+    padding:10px;
+}
+/* End Singer Style */
+
+/* Start Counter Style */
+#counter{
+    background-image: linear-gradient(rgba(214, 46, 51, 0.6) 50%, rgba(214, 46, 51, 0.6) 100%),url('../image/invitation-2508607__340.jpg');
+    background-size: cover;
+    background-position: center center;
+    padding: 80px 0;
+}
+.day,.hour,.mint,.sec{
+    box-shadow: 0 0 5px 5px #0000006e;
+}
+/* End Counter Style */
+
+/* Start Contact Style */
+.links-contact a{
+    width: 40px;
+    height: 40px;
+}
+.links-contact a:hover{
+    background-color:rgba(214, 46, 51, 0.6) !important ;
+    i{
+        color: #fff !important;
+    }
+}
+.contact-login textarea{
+    height: 200px;
+}
+/* End Contact Style */
